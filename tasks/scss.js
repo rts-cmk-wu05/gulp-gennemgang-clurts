@@ -14,6 +14,12 @@ function scss () {
         .pipe(connect.reload());
 }
 
+function buildSCSS () {
+    return gulp.src("./src/scss/**/*.scss")
+        .pipe(sass({ outputStyle: "compressed"}))
+        .pipe(gulp.dest("./build/css"));
+}
+
 function watchSCSS () {
     return gulp.watch("./src/scss/**/*.scss", {
         ignoreInitial: false
@@ -21,7 +27,8 @@ function watchSCSS () {
 }
 
 module.exports = {
-    watchSCSS
+    watchSCSS, 
+    buildSCSS
 }
 
 

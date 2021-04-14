@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "gulp",
+    "build": "gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,9 +26,12 @@
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.7.0",
+    "gulp-image-resize": "^0.13.1",
+    "gulp-imagemin": "^7.1.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
     "node-sass": "^5.0.0"
   }
 }

@@ -7,6 +7,11 @@ function media() {
         .pipe(connect.reload());
 }
 
+function buildMEDIA() {
+    return gulp.src("./src/media/**/*.*")
+        .pipe(gulp.dest("./build/media"));
+}
+
 function watchMEDIA() {
     return gulp.watch("./src/media/**/*.*", {
         ignoreInitial: false
@@ -14,5 +19,6 @@ function watchMEDIA() {
 }
 
 module.exports = {
-    watchMEDIA
+    watchMEDIA,
+    buildMEDIA
 }

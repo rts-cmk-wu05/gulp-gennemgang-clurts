@@ -14,6 +14,17 @@ function html () {
         .pipe(connect.reload());
 }
 
+function buildHTML () {
+    return gulp.src("./src/html/*.html")
+        .pipe(rename( function(path) {
+            if(path.basename !== "index") {
+                path.dirname = path.basename;
+                path.basename = "index"
+            }
+        }))
+        .pipe(gulp.dest("./build"));
+}
+
 function watchHTML () {
     return gulp.watch("./src/html/*.html", {
         ignoreInitial: false
@@ -21,5 +32,6 @@ function watchHTML () {
 }
 
 module.exports = {
-    watchHTML
+    watchHTML, 
+    buildHTML
 }
