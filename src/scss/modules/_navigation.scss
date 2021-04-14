@@ -1,0 +1,25 @@
+.navigation {
+    background-color: chartreuse;
+
+    &__list { 
+        list-style: none;
+        padding-left: 0;
+        display: flex;
+        justify-content: flex-end;
+
+        &--active {
+            color: $secondary-color;
+        }
+    }
+
+    &__listItem {
+        font-size: 1em;
+    }
+    &__listItem:not(:last-of-type) {
+        margin-right: 2em;
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+}
