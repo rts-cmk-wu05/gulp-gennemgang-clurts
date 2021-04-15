@@ -1,0 +1,25 @@
+
+.contactform {
+    @include blockyblock;
+    width: 25em;
+    
+    &__label {
+        @include blockyblock;
+        margin: 1em 0 0.25em;
+    }
+    &__input {
+        @include blockyblock;
+        @include formfield;
+
+        
+    }
+    &__textarea {
+        @include blockyblock;
+        @include formfield;
+        resize: none;
+    }
+
+    &__submit {
+        margin-top: 1.5em;
+    }
+}

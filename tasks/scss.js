@@ -8,7 +8,7 @@ sass.compiler = require("node-sass")
 function scss () {
     return gulp.src("./src/scss/**/*.scss")
         .pipe(sourcemaps.init())
-        .pipe(sass())
+        .pipe(sass({ outputStyle: "expanded"}))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest("./dist/css"))
         .pipe(connect.reload());
