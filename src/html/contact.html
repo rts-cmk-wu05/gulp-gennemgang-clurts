@@ -8,7 +8,7 @@
     <title>Contact</title>
 </head>
 <body>
-    <h1>This is the Contact page!</h1>
+    <h1 class="headline">This is the Contact page!</h1>
 
     <nav class="navigation">
         <ul class="navigation__list">
@@ -20,5 +20,50 @@
             </li>
         </ul>
     </nav>
+
+    <!--
+        fulde navn
+        email 
+        besked
+    -->
+
+
+    <form class="contactform">
+        <label 
+            for="fullname" 
+            class="contactform__label"
+        >Fulde navn:</label>
+        <input 
+            type="text" 
+            name="fullname" 
+            id="fulname" 
+            placeholder="Indtast dit fulde navn"
+            class="contactform__input"
+        >
+        <label 
+            for="email" 
+            class="contactform__label"
+        >Email:</label>
+        <input 
+            type="email" 
+            name="email" 
+            id="email" 
+            placeholder="Indtast din email"
+            class="contactform__input"
+        >
+        <label 
+            for="message" class="contactform__label">Indtast din besked:</label>
+        <textarea 
+            name="message" 
+            id="message" 
+            cols="30" 
+            rows="10" 
+            placeholder="Indtast din besked..."
+            class="contactform__textarea"
+        ></textarea>
+        <button type="submit" class="contactform__submit">Send din besked</button>
+    </form>
+
+
 </body>
 </html>

@@ -1,0 +1,23 @@
+@mixin blockyblock {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+@mixin formfield ($distance: $padding-small, $radius: $form-border-radius ) {
+    padding: $distance;
+    border: 1px solid lightgrey;
+    border-radius: $radius;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: $primary-light;
+}
+
+@mixin flexme ($justification: false) {
+    display: flex;
+
+    @if $justification {
+        justify-content: $justification;
+    } 
+}
+

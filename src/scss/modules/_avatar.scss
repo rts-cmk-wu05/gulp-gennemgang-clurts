@@ -1,0 +1,8 @@
+
+@each $name, $size in $avatar-sizes {
+    .avatar-#{$name} {
+        height: $size;
+        width: $size;
+        border-radius: 50%; 
+    }
+}
