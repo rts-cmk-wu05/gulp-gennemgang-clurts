@@ -1,8 +1,28 @@
-$primary-color: #f3ffbb;
+$primary-color: hsl(111, 47%, 62%);
 $secondary-color: lightblue;
+
+$primary-dark1: darken($primary-color, 20%);
+$primary-dark2: darken($primary-color, 50%);
+
+$primary-light: lighten($primary-color, 30%);
+
+$call-to-action: complement($primary-color);
+
+
+$sizes: (
+    "small": 0.5em, 
+    "medium": 1.5em, 
+    "large": 3em);
+
 
 $padding-small: 0.5em;
 $padding-medium: 1.5em;
 $padding-large: 3em;
 
-$form-border-radius: 0.25em
+$form-border-radius: 0.25em;
+
+$avatar-sizes: (
+    small: 2em, 
+    medium: 4em, 
+    large: 8em
+    );

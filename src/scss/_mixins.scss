@@ -10,4 +10,14 @@
     border-radius: $radius;
     font-size: 1em;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: $primary-light;
 }
+
+@mixin flexme ($justification: false) {
+    display: flex;
+
+    @if $justification {
+        justify-content: $justification;
+    } 
+}
+
