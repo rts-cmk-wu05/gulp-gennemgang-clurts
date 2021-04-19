@@ -13,11 +13,11 @@ const localstModule = (function() {
     const read = function(name) {
        let readValue = localStorage.getItem(name)
 
-       if (readValue.charAt(0) === "{" && readValue.endsWith("}")) {
+       if (readValue && readValue.charAt(0) === "{" && readValue.endsWith("}")) {
            readValue = JSON.parse(readValue)
        }
 
-       if (!isNaN(readValue)) {
+       if (readValue && !isNaN(readValue)) {
            readValue = Number(readValue)
        }
        

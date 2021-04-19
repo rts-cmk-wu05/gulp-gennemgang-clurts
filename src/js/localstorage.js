@@ -9,21 +9,25 @@ let specialusername = {
 }
 
 console.log(specialusername)
+if (localWriteBtn) {
+    localWriteBtn.addEventListener("click", function() {
+        localstModule.create("username", specialusername)
+    })
+}
 
-localWriteBtn.addEventListener("click", function() {
-    localstModule.create("username", specialusername)
-})
+if(localReadBtn) {
+    localReadBtn.addEventListener("click", function() {
+        let fnyf = localstModule.read("username")
+        console.log(fnyf)
+        console.log(fnyf.name)
+        console.log(fnyf.value)
 
-localReadBtn.addEventListener("click", function() {
-    let fnyf = localstModule.read("username")
-    console.log(fnyf)
-    console.log(fnyf.name)
-    console.log(fnyf.value)
-
-})
+    })
+}
 
 console.log(readUsername);
-
-localRemoveBtn.addEventListener("click", function() {
-    localstModule.remove("username")
-})
+if(localRemoveBtn) {
+    localRemoveBtn.addEventListener("click", function() {
+        localstModule.remove("username")
+    })
+}

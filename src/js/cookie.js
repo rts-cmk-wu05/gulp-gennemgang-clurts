@@ -18,17 +18,21 @@ function getCookie(cname) {
     return "";
   }
 
-cookiebtn.addEventListener("click", function() {
-    let expdate = new Date()
-    //expdate.setTime
-    document.cookie = "username=nissemand; expires=Sat, 17 Apr 2021 12:00:00 GMT"
-    document.cookie = "realname=Santa Claus; expires=Sun, 18 Apr 2021 12:00:00 GMT"
-})
+if (cookiebtn) {
+  cookiebtn.addEventListener("click", function() {
+      let expdate = new Date()
+      //expdate.setTime
+      document.cookie = "username=nissemand; expires=Sat, 17 Apr 2021 12:00:00 GMT"
+      document.cookie = "realname=Santa Claus; expires=Sun, 18 Apr 2021 12:00:00 GMT"
+  })
+}
 
+if (readbtn) {
 readbtn.addEventListener("click", function() {
     theCookies = getCookie("username");
     console.log(theCookies)
 })
+}
 
 
 
