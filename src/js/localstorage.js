@@ -1,14 +1,29 @@
-const localst = document.querySelector(".localst")
+const localWriteBtn = document.querySelector(".localWrite")
+const localReadBtn = document.querySelector(".localRead")
+const localRemoveBtn = document.querySelector(".localRemove")
+let readUsername;
 
-let specialusername = "nissemand"
+let specialusername = {
+    "name": "nissemand",
+    "value": 42
+}
 
-console.log("hello from localst")
-localStorage.setItem("username", specialusername)
+console.log(specialusername)
 
-let readUsername = localStorage.getItem("username")
+localWriteBtn.addEventListener("click", function() {
+    localstModule.create("username", specialusername)
+})
+
+localReadBtn.addEventListener("click", function() {
+    let fnyf = localstModule.read("username")
+    console.log(fnyf)
+    console.log(fnyf.name)
+    console.log(fnyf.value)
+
+})
 
 console.log(readUsername);
 
-localst.addEventListener("click", function() {
-    localStorage.removeItem("username")
+localRemoveBtn.addEventListener("click", function() {
+    localstModule.remove("username")
 })
